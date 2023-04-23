@@ -1,8 +1,7 @@
-const btnSuccess = document.querySelector(".btn-success");
-const cookies = document.querySelector(".cookies");
-console.log(cookies);
+const icon = document.querySelector('.navbar-mobile i');
+const modal = document.querySelector('.modal');
 
-btnSuccess.addEventListener("click", () => {
-  console.log("click on button !");
-  cookies.style.opacity = '0';
+icon.addEventListener('click', () => {
+  modal.classList.toggle('change-modal');
+  icon.classList.toggle('fa-times');
 });

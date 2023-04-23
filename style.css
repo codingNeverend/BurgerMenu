@@ -1,57 +1,94 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-body{
-    font-size: 1.4rem;
-    font-family: arial;
-    color: white;
+html{
+  font-size: 62.5%;/* 1rem = 10px*/
 }
 
-.container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1E2337;
+body {
+  font-size: 1.4rem;
+  font-family: "Quicksand", sans serif;
+  color: white;
 }
 
-.cookies{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: grey;
-    display: flex;
-    justify-content: space-between;
-    padding: 3rem;
-    opacity: 1;
-    transition: 0.50s;
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e2337;
 }
 
-.cookies-texte{
-    width: 70%;
+.navbar-desktop {
+  /* background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; */
+  height: 8rem;
+  line-height: 8rem;
+  text-align: center;
 }
 
-.cookie-btn{
-    display: flex;
+.navbar-desktop a {
+  padding: 3rem;
 }
 
-.btn{
-    color: white;
-    padding: 1rem;
-    border: none;
-    border-radius: 10px;
+.navbar-mobile{
+  display:none;
 }
 
-.btn.btn-success{
-    background-color: #1E2337;
+.navbar-mobile i {
+  position: fixed;
+  top: 9px;
+  right: 15px;
+  font-size: 3rem;
+  color: white;
+  z-index: 9999;
 }
 
-.btn.btn-deny{
-    background-color: grey;
+.modal{
+  transition: 0.9s;
+  background-color: #F92995;
+  height: 100vh;
+  position: fixed;
+  top: -100vh;
+left: 0;
+width:100%;
+opacity: 0.9;
+}
+
+
+.navbar-mobile .navbar-mobile-list{
+  display:flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-mobile .navbar-mobile-list a{
+  font-size: 5rem;
+  font-weight: 800;
+  color: #1E2337;
+  padding: 2rem;
+}
+
+@media screen and (max-width : 700px) {
+  .navbar-desktop {
+    display: none;
+  }
+  .navbar-mobile {
+    display: block;
+  }
+}
+
+.change-modal{
+  top: 0;
 }
